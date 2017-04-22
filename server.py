@@ -5,8 +5,10 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 class MyHTTPReqHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        print("{} wrote:".format(self.client_address[0]))
+        print("Read from: {}".format(self.client_address[0]))
+        print("Headers:   {}\n".format(self.headers["User-Agent"]))
         self.wfile.write(b'ok\r\n')
+
         self.close_connection = True
 
 
