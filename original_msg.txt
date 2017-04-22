@@ -1,0 +1,103 @@
+Delivered-To: cwee@andrew.cmu.edu
+Received: by 10.36.66.20 with SMTP id i20csp1452184itb;
+        Mon, 27 Mar 2017 15:22:44 -0700 (PDT)
+X-Received: by 10.55.88.66 with SMTP id m63mr23363450qkb.270.1490653363988;
+        Mon, 27 Mar 2017 15:22:43 -0700 (PDT)
+Return-Path: <abhinans@andrew.cmu.edu>
+Received: from relay-google.andrew.cmu.edu (RELAY-GOOG-02.ANDREW.CMU.EDU. [128.2.155.70])
+        by mx.google.com with ESMTPS id r50si1767515qtr.40.2017.03.27.15.22.43
+        for <cwee@andrew.cmu.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 27 Mar 2017 15:22:43 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.216.176 is neither permitted nor denied by best guess record for domain of abhinans@andrew.cmu.edu) client-ip=209.85.216.176;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@andrew-cmu-edu.20150623.gappssmtp.com;
+       spf=neutral (google.com: 209.85.216.176 is neither permitted nor denied by best guess record for domain of abhinans@andrew.cmu.edu) smtp.mailfrom=abhinans@andrew.cmu.edu
+Received: from andrew-mx-04.andrew.cmu.edu (ANDREW-MX-04.ANDREW.CMU.EDU [128.2.155.71])
+	by relay-google.andrew.cmu.edu (8.15.2/8.15.1) with ESMTP id v2RMMhxP055248
+	for <cwee@relay-google.andrew.cmu.edu>; Mon, 27 Mar 2017 18:22:43 -0400
+Received: from mail-qt0-f176.google.com (mail-qt0-f176.google.com [209.85.216.176])
+	by andrew-mx-04.andrew.cmu.edu (8.15.2/8.15.2) with ESMTPS id v2RMMgUT033485
+	(version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <cwee@andrew.cmu.edu>; Mon, 27 Mar 2017 18:22:43 -0400
+Received: by mail-qt0-f176.google.com with SMTP id r45so50386402qte.3
+        for <cwee@andrew.cmu.edu>; Mon, 27 Mar 2017 15:22:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=andrew-cmu-edu.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:date:message-id:subject:from:to;
+        bh=ccgZ8QTlPpdE8HGtuQM40JGmXfgmEmgKbMheeflaWOU=;
+        b=GItwbslT2fM+2u/5ZFUMPcePA0jA0zdIjQgiatZT4SjLVfZzCdGk3Jcgqy+NPbIiHy
+         yFH9UnGaMBkdJtIYEKopUN26p2SRMcLPVbkL55Mo5QDyoaayLymqQl6LxMAn28nUXKQS
+         1V7D82pXiD6vuzq+SQyZGKp9vqbws6KXnzse2ItOPTJ9RkHyxydeQpi/Unl1klC+/MT2
+         mheh1Hp+g60Zybgpj1aooeSt5pqfCFrRO3sNTDSSKaAziQl8H8p0mjBr7pg8qVmHNaOm
+         JbORg0c/uwjE71V8Ax/BHndWTZ7NrTOCaxV4HMZ8dQRqcByWFi0Tg0p+o3Jd0bj5lPp7
+         UQ/Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to;
+        bh=ccgZ8QTlPpdE8HGtuQM40JGmXfgmEmgKbMheeflaWOU=;
+        b=b5COPx84ucyouNxrBgRyTPJ5P6l5izev6qu3YUD9F7gfnOmMBEMJRloHSF+hVSFQHP
+         kACMcIHu5fcWA5/oHPBApe9opsOELeEPDsfVocCNWHkf2KEY76Fk0XDW90Cdp41g4oFX
+         QtLu4xTKTQqlFL6mKbH4OGQ5UU8KFB+QWgMoC28ukUbkel/D9uYFI1NaI29tl2gJ2R7c
+         wZ/vAc/04hYh1xCv4s7IRwF81Aav6evWYzAFL2tvV/VVXfmAGVTQOL7jE1y6lkZ3axBL
+         sUhtg4zDIJPB2iX0phKQH5gP7c90RFFvVvfLYg01xyAP7hucxW3tfe2iegU9N2RduI+5
+         1lSQ==
+X-Gm-Message-State: AFeK/H0tj+w0qHS/Kn0U3w+SfWNM0YVvQfoB86D9UO08FBIZ83fSKfqnDElAWwp2J6KdW7BLpJoc4rNu
+X-Received: by 10.237.50.193 with SMTP id z59mr25555025qtd.237.1490653361778;
+        Mon, 27 Mar 2017 15:22:41 -0700 (PDT)
+Received: from localhost (ec2-54-227-44-237.compute-1.amazonaws.com. [54.227.44.237])
+        by smtp.gmail.com with ESMTPSA id i125sm1306367qkf.52.2017.03.27.15.22.40
+        for <cwee@andrew.cmu.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 27 Mar 2017 15:22:40 -0700 (PDT)
+Mime-Version: 1.0
+Date: Mon, 27 Mar 2017 15:22:31 -0700
+X-Mailer: Polymail
+Message-ID: <58d9906e0bf29900000a26ed@polymail.io>
+Subject: 
+From: "Abhinand Sukumar" <abhinans@andrew.cmu.edu>
+To: "Colin Wee" <cwee@andrew.cmu.edu>
+Content-Type: multipart/alternative;
+ boundary=903194ef4a4bf078c54707e0ac0f8d069ad7804fd56ebf98b47b37a54deb
+X-DKIM-Verification: pass
+X-PMX-Version: 6.2.1.2493963, Antispam-Engine: 2.7.2.2107409, Antispam-Data: 2017.3.27.221815
+X-Spam-Clean: 11% (
+ SXL_IP_PROXY_RCVD 0.5, BLANK_SUBJECT 0.1, HTML_70_90 0.1, MIME_LOWER_CASE 0.05, BODYTEXTH_SIZE_10000_LESS 0, BODYTEXTP_SIZE_3000_LESS 0, BODYTEXTP_SIZE_400_LESS 0, BODY_SIZE_1300_1399 0, BODY_SIZE_2000_LESS 0, BODY_SIZE_5000_LESS 0, BODY_SIZE_7000_LESS 0, CTYPE_MULTIPART_NO_QUOTE 0, DATE_TZ_NA 0, DKIM_SIGNATURE 0, FROM_EDU_TLD 0, FROM_SAME_AS_TO_DOMAIN 0, LINK_TO_IMAGE 0, SPF_NONE 0, WEBMAIL_SOURCE 0, __ANY_URI 0, __CP_URI_IN_BODY 0, __CT 0, __CTYPE_HAS_BOUNDARY 0, __CTYPE_MULTIPART 0, __CTYPE_MULTIPART_ALT 0, __DQ_NEG_HEUR 0, __DQ_NEG_IP 0, __FROM_DOMAIN_IN_ANY_TO1 0, __FROM_DOMAIN_IN_RCPT 0, __FROM_SAME_AS_TO_DOMAIN 0, __HAS_FROM 0, __HAS_HTML 0, __HAS_MSGID 0, __HAS_X_MAILER 0, __HELO_GMAIL 0, __HTML_AHREF_TAG 0, __HTML_TAG_DIV 0, __HTTPS_URI 0, __MIME_HTML 0, __MIME_TEXT_H 0, __MIME_TEXT_H1 0, __MIME_TEXT_H2 0, __MIME_TEXT_P 0, __MIME_TEXT_P1 0, __MIME_TEXT_P2 0, __MIME_VERSION 0,
+ __MULTIPLE_URI_TEXT 0, __RDNS_GMAIL 0, __SANE_MSGID 0, __TO_MALFORMED_2 0, __TO_NAME 0, __TO_NAME_DIFF_FROM_ACC 0, __TO_REAL_NAMES 0, __URI_IN_BODY 0, __URI_NO_MAILTO 0, __URI_NO_WWW 0, __URI_NS , __URI_WITH_PATH 0, __YOUTUBE_RCVD 0)
+X-Spam-Score: 11%
+X-PMX_SPF: SPF_NONE
+X-Scanned-By: MIMEDefang 2.78 on 128.2.155.71
+
+--903194ef4a4bf078c54707e0ac0f8d069ad7804fd56ebf98b47b37a54deb
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+The bear went over the mountain to play TF2, but all that he could play was=
+ Smash.
+
+Abhinand Sukumar
+
+Sent from
+https://polymail.io/?utm_source=3Dpolymail&utm_medium=3Dreferral&utm_campai=
+gn=3Dsignature
+--903194ef4a4bf078c54707e0ac0f8d069ad7804fd56ebf98b47b37a54deb
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<img style=3D"border: none; background:none; width: 0; height: 0;" src=3D"h=
+ttps://share.polymail.io/v2/z/a/NThkOTkwNmUwYmYy/8C00nyU0AOb3aTWlgPSi7XtKTn=
+9AuGMedY9UKI43t1acz-2dZRvUDklHtQzv20_z5ZddNZD-KFoUY2fVlNMMDOE_5qJZiKMkcl3NJ=
+SNot23Bjxlt9CDPEdsF2LtqY_SzUciKNTouYQeY97ivE9k=3D.png" alt=3D"" width=3D"0p=
+x" height=3D"0px" border=3D"0" /><div></div>
+<div>
+The bear went over the mountain to play TF2, but all that he could play was=
+ Smash.<br><br>
+</div>
+<div id=3D"psignature">
+<div>Abhinand Sukumar</div>
+<div style=3D"font-size:10px; color: #7E8F9F;">Sent from <a href=3D"https:/=
+/polymail.io/?utm_source=3Dpolymail&amp;utm_medium=3Dreferral&amp;utm_campa=
+ign=3Dsignature" target=3D"_blank">Polymail</a>
+</div>
+</div>
+--903194ef4a4bf078c54707e0ac0f8d069ad7804fd56ebf98b47b37a54deb--
